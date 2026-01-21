@@ -7,16 +7,18 @@ import Collection from "./pages/Collection";
 import Header from "./components/Header";
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Man />} />
-        <Route path="woman" element={<Woman />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="about" element={<About />} />
-        <Route path="collection" element={<Collection />} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Man />} />
+          <Route path="woman" element={<Woman />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="about" element={<About />} />
+          <Route path="collection" element={<Collection />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

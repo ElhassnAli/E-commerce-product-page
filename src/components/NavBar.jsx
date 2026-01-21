@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 function NavBar() {
   return (
     <nav>
-      <ul>
+      <ul className="md:flex md:justify-between gap-5">
         <li>
           <NavLink to="/">Man</NavLink>
         </li>
