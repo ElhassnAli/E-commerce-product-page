@@ -1,17 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 @import "tailwindcss";
 
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
-ul .active{
-    border-bottom: 2px solid red;
+
+@media (min-width: 768px) {
+  ul li a.active {
+    border-bottom: 3px solid red;
+  }
 }
-header .open{
-    transform: translateX(150%);
-    background-color: white;
-    left: 0;
-    padding: 20px;
-    width: 60%;
-    height: 100%;
-    transition: 0.3s ease ;
+
+header .open {
+  transform: translateX(150%);
+  background-color: white;
+  left: 0;
+  padding: 20px;
+  width: 60%;
+  height: 100%;
+  transition: 0.3s ease;
+}
+html {
+  font-family: "Inter", sans-serif;
 }

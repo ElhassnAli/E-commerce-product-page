@@ -1,8 +1,8 @@
 import NavBar from "./NavBar";
 function Header({ isOpen, setIsOpen }) {
   return (
-    <header className="flex items-center justify-between md:p-3 p-2">
-      <div className="flex justify-between items-center gap-3 ">
+    <header className="flex items-center justify-between md:p-4.5  md:border-b border-gray-300 mb-5">
+      <div className="flex justify-between items-center gap-5 ">
         <img
           src="/images/icon-menu.svg"
           alt="icon-menu"
@@ -13,10 +13,11 @@ function Header({ isOpen, setIsOpen }) {
         <img
           src="/images/logo.svg"
           alt="Sneakers logo"
-          className={isOpen ? "pl-5" : undefined}
+          className={` ${isOpen ? "pl-5" : undefined}`}
         />
+        <NavBar Open={isOpen} IsOpen={setIsOpen} />
       </div>
-      <NavBar Open={isOpen} IsOpen={setIsOpen} />
+
       <div className="flex justify-between items-center gap-5 ">
         <button>
           <img src="/images/icon-cart.svg" alt="icon-cart" />

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 function NavBar({ Open, IsOpen }) {
   return (
     <nav
-      className={`absolute md:static -translate-x-[150%] transition duration-300 md:translate-x-0 top-0  ${Open ? "open" : undefined}`}
+      className={`absolute md:static -translate-x-[150%] transition duration-300 md:translate-x-0 top-0 lg:text-[16px] ${Open ? "open" : undefined}`}
     >
       <img
         src="/images/icon-close.svg"
@@ -12,21 +12,31 @@ function NavBar({ Open, IsOpen }) {
         className="md:hidden mb-10"
       />
 
-      <ul className="flex flex-col gap-4  md:flex-row md:justify-between md:gap-5 ">
+      <ul className="flex flex-col gap-4  md:flex-row md:justify-between md:gap-4 ">
         <li onClick={() => IsOpen(false)}>
-          <NavLink to="/">Man</NavLink>
+          <NavLink to="/" className="md:pb-5">
+            Man
+          </NavLink>
         </li>
         <li onClick={() => IsOpen(false)}>
-          <NavLink to="/woman">Woman</NavLink>
+          <NavLink to="/woman" className="md:pb-5">
+            Woman
+          </NavLink>
         </li>
         <li onClick={() => IsOpen(false)}>
-          <NavLink to="/collection">Collection</NavLink>
+          <NavLink to="/collection" className="md:pb-5">
+            Collection
+          </NavLink>
         </li>
         <li onClick={() => IsOpen(false)}>
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/about" className="md:pb-5">
+            About
+          </NavLink>
         </li>
         <li onClick={() => IsOpen(false)}>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/contact" className="md:pb-5">
+            Contact
+          </NavLink>
         </li>
       </ul>
     </nav>
