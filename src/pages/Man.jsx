@@ -1,5 +1,13 @@
+import ImageSw from "../components/ImageSw";
+import ProductDescription from "../components/ProductDescription";
+
 function Man() {
-  return <h1>Man</h1>;
+  return (
+    <>
+      <ImageSw />
+      <ProductDescription />
+    </>
+  );
 }
 
 export default Man;

@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div
-      className={` md:w-[80%] md:m-auto p-2 h-dvh font-display${isOpen ? "bg-black/20" : ""}`}
+      className={` md:w-[80%] md:m-auto  h-dvh font-display ${isOpen ? "bg-black/20" : ""}`}
       onClick={() => isOpen && setIsOpen(false)}
     >
       <BrowserRouter>

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 function NavBar({ Open, IsOpen }) {
   return (
     <nav
-      className={`absolute md:static -translate-x-[150%] transition duration-300 md:translate-x-0 top-0 lg:text-[16px] ${Open ? "open" : undefined}`}
+      className={`absolute md:static -translate-x-[150%] transition duration-300 md:translate-x-0 top-0 lg:text-[16px] z-50 ${Open ? "open" : undefined}`}
     >
       <img
         src="/images/icon-close.svg"

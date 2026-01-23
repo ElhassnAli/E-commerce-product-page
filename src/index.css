@@ -1,10 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap");
 @import "tailwindcss";
-
-h1 {
-  text-align: center;
-}
 
 @media (min-width: 768px) {
   ul li a.active {
@@ -22,5 +17,5 @@ header .open {
   transition: 0.3s ease;
 }
 html {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }

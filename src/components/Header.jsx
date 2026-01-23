@@ -1,7 +1,7 @@
 import NavBar from "./NavBar";
 function Header({ isOpen, setIsOpen }) {
   return (
-    <header className="flex items-center justify-between md:p-4.5  md:border-b border-gray-300 mb-5">
+    <header className="flex items-center justify-between md:p-4.5 px-4 pt-3 md:border-b border-gray-300 mb-5">
       <div className="flex justify-between items-center gap-5 ">
         <img
           src="/images/icon-menu.svg"
