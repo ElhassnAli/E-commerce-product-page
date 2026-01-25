@@ -1,6 +1,6 @@
 import Button from "../components/Button";
 
-function ProductDescription() {
+function ProductDescription({ setCart }) {
   const price = 250;
   const discountPercentage = 50;
   return (
@@ -28,7 +28,7 @@ function ProductDescription() {
         </p>
         <span className="line-through">${price}.00</span>
       </h5>
-      <Button />
+      <Button setCart={setCart} price={(price * discountPercentage) / 100} />
     </div>
   );
 }

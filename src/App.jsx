@@ -8,6 +8,8 @@ import Collection from "./pages/Collection";
 import Header from "./components/Header";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const [cart, setCart] = useState([]);
+  console.log(cart);
 
   return (
     <div
@@ -15,9 +17,9 @@ function App() {
       onClick={() => isOpen && setIsOpen(false)}
     >
       <BrowserRouter>
-        <Header isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Header isOpen={isOpen} setIsOpen={setIsOpen} cartItems={cart} />
         <Routes>
-          <Route path="/" element={<Man />} />
+          <Route path="/" element={<Man setCart={setCart} />} />
           <Route path="woman" element={<Woman />} />
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />
