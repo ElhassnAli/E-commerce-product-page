@@ -11,6 +11,12 @@ function App() {
   const [cart, setCart] = useState([]);
   console.log(cart);
 
+  function filterCart(i) {
+    const isExist = cart.some((item) => item.itemName === i.itemName);
+    if (!isExist) {
+      setCart((e) => [...e, i]);
+    }
+  }
   return (
     <div
       className={` md:w-[80%] md:m-auto  h-dvh font-display ${isOpen ? "bg-black/20" : ""}`}
@@ -19,7 +25,7 @@ function App() {
       <BrowserRouter>
         <Header isOpen={isOpen} setIsOpen={setIsOpen} cartItems={cart} />
         <Routes>
-          <Route path="/" element={<Man setCart={setCart} />} />
+          <Route path="/" element={<Man filterCart={filterCart} />} />
           <Route path="woman" element={<Woman />} />
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />

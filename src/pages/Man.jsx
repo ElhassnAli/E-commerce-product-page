@@ -1,11 +1,11 @@
 import ImageSw from "../components/ImageSw";
 import ProductDescription from "../components/ProductDescription";
 
-function Man({ setCart }) {
+function Man({ filterCart }) {
   return (
     <>
       <ImageSw />
-      <ProductDescription setCart={setCart} />
+      <ProductDescription filterCart={filterCart} />
     </>
   );
 }

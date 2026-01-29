@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Button({ setCart, price }) {
+function Button({ filterCart, price }) {
   const [itemsCount, setItemsCount] = useState(0);
   return (
     <div className="md:flex">
@@ -21,19 +21,18 @@ function Button({ setCart, price }) {
         </button>
       </div>
       <button
-        className="flex gap-3 justify-center w-full bg-[#ff7d1b] py-4 rounded-[10px] cursor-pointer"
+        className="flex gap-3 justify-center w-full bg-[#ff7d1b] py-4  rounded-[10px] cursor-pointer"
         disabled={itemsCount === 0}
-        onClick={() =>
-          setCart((e) => [
-            ...e,
-            {
-              quantity: itemsCount,
-              itemPrice: price,
-              itemName: "Fall Limited Edition Sneakers",
-              image: "/images/image-product-1-thumbnail.jpg",
-            },
-          ])
-        }
+        onClick={() => {
+          let object = {
+            quantity: itemsCount,
+            itemPrice: price,
+            itemName: "Fall Limited Edition Sneakers",
+            image: "/images/image-product-1-thumbnail.jpg",
+          };
+          filterCart(object);
+          setItemsCount(0);
+        }}
       >
         <img src="/images/icon-cart.svg" alt="icon-cart" />
         Add To Cart
@@ -41,5 +40,14 @@ function Button({ setCart, price }) {
     </div>
   );
 }
-
 export default Button;
+
+// [
+//   ...e,
+//   {
+//     quantity: itemsCount,
+//     itemPrice: price,
+//     itemName: "Fall Limited Edition Sneakers",
+//     image: "/images/image-product-1-thumbnail.jpg",
+//   },
+// ];

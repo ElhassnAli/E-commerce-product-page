@@ -24,6 +24,11 @@ function Header({ isOpen, setIsOpen, cartItems }) {
       <div className="flex justify-between items-center gap-5 ">
         <button onClick={() => setCartClicked((e) => !e)}>
           <img src="/images/icon-cart.svg" alt="icon-cart" />
+          <span
+            className={`absolute top-3 text-[10px] bg-orange-500 text-white px-2 rounded-2xl ${cartItems.length == 0 ? "hidden" : ""}`}
+          >
+            {cartItems.length}
+          </span>
         </button>
         <button onClick={() => setProfileClicked((e) => !e)}>
           <img
