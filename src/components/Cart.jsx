@@ -15,6 +15,13 @@ function Cart({ cartItems }) {
           <p>Your Cart Is Empty</p>
         )}
       </div>
+      {cartItems.length >= 1 ? (
+        <button className="flex g w-[95%] m-auto justify-center items-center bg-[#ff7d1b] py-4  rounded-[10px] cursor-pointer mb-5">
+          Checkout
+        </button>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

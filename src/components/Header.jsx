@@ -10,7 +10,10 @@ function Header({ isOpen, setIsOpen, cartItems }) {
         <img
           src="/images/icon-menu.svg"
           alt="icon-menu"
-          onClick={() => setIsOpen(true)}
+          onClick={() => {
+            setIsOpen(true);
+            setCartClicked(false);
+          }}
           className={`md:hidden ${isOpen ? "hidden" : undefined}`}
         />
 
@@ -22,7 +25,11 @@ function Header({ isOpen, setIsOpen, cartItems }) {
         <NavBar Open={isOpen} IsOpen={setIsOpen} />
       </div>
       <div className="flex justify-between items-center gap-5 ">
-        <button onClick={() => setCartClicked((e) => !e)}>
+        <button
+          onClick={() => {
+            setCartClicked((e) => !e);
+          }}
+        >
           <img src="/images/icon-cart.svg" alt="icon-cart" />
           <span
             className={`absolute top-3 text-[10px] bg-orange-500 text-white px-2 rounded-2xl ${cartItems.length == 0 ? "hidden" : ""}`}
