@@ -4,7 +4,7 @@ function ImageSw() {
   const [imageNum, setImageNum] = useState(1);
   const Image = `/images/image-product-${imageNum}.jpg`;
   return (
-    <div className="relative mb-5">
+    <div className="relative mb-5 md:w-[40%]">
       <button
         onClick={() => setImageNum((e) => (e == 4 ? 1 : e + 1))}
         className="absolute top-[50%] cursor-pointer right-3 bg-white w-8 h-8 flex justify-center items-center rounded-3xl"
@@ -18,7 +18,7 @@ function ImageSw() {
       <img
         src={Image}
         alt={`product-${imageNum}`}
-        className="w-full h-75 object-cover object-center"
+        className="w-full h-75 object-cover object-center  "
       />
       <button
         onClick={() => setImageNum((e) => (e == 1 ? 4 : e - 1))}

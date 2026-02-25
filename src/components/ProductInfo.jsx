@@ -1,4 +1,4 @@
-function ProductInfo({ itemInfo }) {
+function ProductInfo({ itemInfo, deleteProduct }) {
   return (
     <div className="flex gap-5 justify-between items-center text-gray-500">
       <img src={itemInfo.image} alt="" className=" w-10 h-10" />
@@ -11,7 +11,7 @@ function ProductInfo({ itemInfo }) {
           </strong>
         </h1>
       </div>
-      <button>
+      <button onClick={() => deleteProduct(itemInfo.itemName)}>
         <img src="/images/icon-delete.svg" alt="" />
       </button>
     </div>

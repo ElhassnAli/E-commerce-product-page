@@ -4,7 +4,7 @@ function ProductDescription({ filterCart }) {
   const price = 250;
   const discountPercentage = 50;
   return (
-    <div className="px-4 pb-5">
+    <div className="px-4 pb-5 md:w-[40%]">
       <h3 className="opacity-60 text-[14px] font-medium tracking-wider">
         SNEAKERS COMPANY
       </h3>

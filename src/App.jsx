@@ -17,13 +17,26 @@ function App() {
       setCart((e) => [...e, i]);
     }
   }
+  function deleteProduct(productName) {
+    setCart(cart.filter((e) => e.itemName !== productName));
+  }
+  function CheckoutOrder() {
+    setCart([]);
+    setIsOpen(false);
+  }
   return (
     <div
       className={` md:w-[80%] md:m-auto  h-dvh font-display ${isOpen ? "bg-black/20" : ""}`}
       onClick={() => isOpen && setIsOpen(false)}
     >
       <BrowserRouter>
-        <Header isOpen={isOpen} setIsOpen={setIsOpen} cartItems={cart} />
+        <Header
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          cartItems={cart}
+          deleteProduct={deleteProduct}
+          CheckoutOrder={CheckoutOrder}
+        />
         <Routes>
           <Route path="/" element={<Man filterCart={filterCart} />} />
           <Route path="woman" element={<Woman />} />

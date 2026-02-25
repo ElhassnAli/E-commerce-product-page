@@ -1,7 +1,13 @@
 import { useState } from "react";
 import NavBar from "./NavBar";
 import Cart from "./Cart";
-function Header({ isOpen, setIsOpen, cartItems }) {
+function Header({
+  isOpen,
+  setIsOpen,
+  cartItems,
+  deleteProduct,
+  CheckoutOrder,
+}) {
   const [profileClicked, setProfileClicked] = useState(false);
   const [cartClicked, setCartClicked] = useState(false);
   return (
@@ -45,7 +51,14 @@ function Header({ isOpen, setIsOpen, cartItems }) {
           />
         </button>
       </div>
-      {cartClicked && <Cart cartItems={cartItems} />}
+      {cartClicked && (
+        <Cart
+          cartItems={cartItems}
+          deleteProduct={deleteProduct}
+          CheckoutOrder={CheckoutOrder}
+          setCartClicked={setCartClicked}
+        />
+      )}
     </header>
   );
 }
