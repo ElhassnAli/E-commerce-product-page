@@ -1,17 +1,17 @@
 import ProductInfo from "./ProductInfo";
 function Cart({ cartItems, deleteProduct, CheckoutOrder, setCartClicked }) {
   return (
-    <div className="absolute w-[95%] rounded-2xl top-18 z-500 bg-white left-1/2 -translate-x-1/2">
+    <div className="absolute w-[95%] rounded-2xl top-18 z-500 bg-white left-1/2 -translate-x-1/2 md:left-auto md:w-[20%]  md:shadow-2xl md:right-0">
       <h4 className="p-5">Cart</h4>
       <hr className="text-gray-300" />
       <div
         className={`flex justify-center flex-col items-center  ${cartItems.length === 0 ? "py-20" : "p-5"}`}
       >
         {cartItems.length >= 1 ? (
-          cartItems.map((item) => (
+          cartItems.map((item, index) => (
             <ProductInfo
               itemInfo={item}
-              key={item.itemName}
+              key={index}
               deleteProduct={deleteProduct}
             />
           ))
@@ -25,7 +25,7 @@ function Cart({ cartItems, deleteProduct, CheckoutOrder, setCartClicked }) {
             CheckoutOrder();
             setCartClicked(false);
           }}
-          className="flex g w-[95%] m-auto justify-center items-center bg-[#ff7d1b] py-4  rounded-[10px] cursor-pointer mb-5"
+          className="flex w-[85%] m-auto justify-center items-center font-bold bg-[#ff7d1b] py-4  rounded-[10px] cursor-pointer mb-5"
         >
           Checkout
         </button>

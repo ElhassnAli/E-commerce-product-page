@@ -28,7 +28,7 @@ function Header({
           alt="Sneakers logo"
           className={` ${isOpen ? "pl-5" : undefined}`}
         />
-        <NavBar Open={isOpen} IsOpen={setIsOpen} />
+        <NavBar isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
       <div className="flex justify-between items-center gap-5 ">
         <button

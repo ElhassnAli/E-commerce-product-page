@@ -3,8 +3,8 @@ import { useState } from "react";
 function Button({ filterCart, price }) {
   const [itemsCount, setItemsCount] = useState(0);
   return (
-    <div className="md:flex justify-between">
-      <div className=" flex justify-around gap-20 items-center bg-gray-100 py-4 rounded-[10px] my-5 md:flex-1">
+    <div className="md:flex justify-between md:items-center md:justify-start md:gap-10">
+      <div className=" flex justify-around gap-20 items-center bg-gray-100 py-4 rounded-[10px] my-5 md:gap-5  md:w-[25%]">
         <button
           onClick={() => setItemsCount((e) => e - 1)}
           disabled={itemsCount === 0}
@@ -21,7 +21,7 @@ function Button({ filterCart, price }) {
         </button>
       </div>
       <button
-        className="flex gap-3 justify-center w-full md:w-fit items-center bg-[#ff7d1b] py-4  rounded-[10px] cursor-pointer md:flex-1"
+        className="flex gap-3 justify-center font-bold w-full  items-center bg-[#ff7d1b] py-4 md:h-fit  rounded-[10px] cursor-pointer md:w-[50%]"
         disabled={itemsCount === 0}
         onClick={() => {
           let object = {
@@ -41,13 +41,3 @@ function Button({ filterCart, price }) {
   );
 }
 export default Button;
-
-// [
-//   ...e,
-//   {
-//     quantity: itemsCount,
-//     itemPrice: price,
-//     itemName: "Fall Limited Edition Sneakers",
-//     image: "/images/image-product-1-thumbnail.jpg",
-//   },
-// ];
