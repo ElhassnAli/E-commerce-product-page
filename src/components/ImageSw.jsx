@@ -35,7 +35,7 @@ function ImageSw() {
         </button>
       </div>
       <div className="w-full hidden md:block">
-        <ProductThumbnails />
+        <ProductThumbnails setImageNum={setImageNum} imageNum={imageNum} />
       </div>
     </div>
   );
