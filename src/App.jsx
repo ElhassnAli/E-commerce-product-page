@@ -31,7 +31,7 @@ function App() {
       className={` md:w-[80%] md:m-auto  h-dvh font-display ${isOpen ? "bg-black/20" : ""}`}
       onClick={() => isOpen && setIsOpen(false)}
     >
-      <BrowserRouter>
+      <BrowserRouter basename="E-commerce-product-page">
         <Header
           isOpen={isOpen}
           setIsOpen={setIsOpen}
