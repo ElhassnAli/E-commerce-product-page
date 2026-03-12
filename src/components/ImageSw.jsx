@@ -1,9 +1,7 @@
-import { useState } from "react";
 import ProductThumbnails from "./ProductThumbnails";
-const TOTAL_IMAGES = 4;
 
-function ImageSw() {
-  const [imageNum, setImageNum] = useState(1);
+const TOTAL_IMAGES = 4;
+function ImageSw({ setLightBox, imageNum, setImageNum }) {
   const Image = `/images/image-product-${imageNum}.jpg`;
   return (
     <div className="relative mb-5 md:w-[40%]">
@@ -21,7 +19,8 @@ function ImageSw() {
         <img
           src={Image}
           alt={`product-${imageNum}`}
-          className="w-full h-75 object-cover object-center md:h-full md:rounded-2xl md:w-[80%]  "
+          className="w-full h-90  object-center md:h-full md:rounded-2xl md:w-[80%]  "
+          onClick={() => setLightBox(true)}
         />
         <button
           onClick={() => setImageNum((e) => (e === 1 ? TOTAL_IMAGES : e - 1))}

@@ -16,7 +16,7 @@ function ProductInfo({ itemInfo, deleteProduct }) {
         </h1>
       </div>
       <button onClick={() => deleteProduct(itemInfo.itemName)}>
-        <img src="/images/icon-delete.svg" alt="" />
+        <img src="/images/icon-delete.svg" alt="" className="cursor-pointer"/>
       </button>
     </div>
   );

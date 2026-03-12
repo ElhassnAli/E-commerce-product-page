@@ -9,6 +9,8 @@ import Header from "./components/Header";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [cart, setCart] = useState([]);
+  const [lightBox, setLightBox] = useState(false);
+  const [imageNum, setImageNum] = useState(1);
   console.log(cart);
 
   function filterCart(i) {
@@ -38,7 +40,18 @@ function App() {
           CheckoutOrder={CheckoutOrder}
         />
         <Routes>
-          <Route path="/" element={<Man filterCart={filterCart} />} />
+          <Route
+            path="/"
+            element={
+              <Man
+                filterCart={filterCart}
+                lightBox={lightBox}
+                setLightBox={setLightBox}
+                imageNum={imageNum}
+                setImageNum={setImageNum}
+              />
+            }
+          />
           <Route path="woman" element={<Woman />} />
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />
